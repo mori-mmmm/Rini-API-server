@@ -14,7 +14,6 @@ from openai.types.chat import ChatCompletionMessage, ChatCompletionMessageToolCa
 
 MCP_SERVER_URL_LIST = [
     "http://localhost:65000/sse",
-    "https://glama.ai/mcp/instances/p3xp6zti6t/sse?token=6bedd32a-15fa-4efe-9190-44773962ba35"
 ]
 
 class MCPClient:
