@@ -88,7 +88,7 @@ class MCPClient:
                 print(f"  [실패] 서버(SSE) 연결 중 오류 발생 ({url}): {type(e).__name__}: {e}")
 
         print(f"\n--- 연결 요약 (SSE) ---")
-        print(f"총 시도: {len(server_urls)}, 성공: {successful_connections}")
+        
         if self.sessions:
             print(f"성공적으로 연결된 서버: {list(self.sessions.keys())}")
             print(f"사용 가능한 총 고유 도구: {[tool['function']['name'] for tool in self.available_tools]}")
