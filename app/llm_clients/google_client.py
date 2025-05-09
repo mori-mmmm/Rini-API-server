@@ -10,7 +10,7 @@ from typing import List, Dict, Tuple, Optional, Any
 from dotenv import load_dotenv
 from google import genai
 
-from google.generativeai import types
+from google.genai import types
 from google.generativeai import generative_models
 from google.api_core import exceptions as google_exceptions
 
@@ -62,7 +62,7 @@ def get_response_text(response):
             response_text = first_candidate.content.parts[0].text
     return response_text
 
-async def handle_tool_call(client, mcp_client, model, gen_config_dict, tool_choice, contents):
+async def handle_tool_call(client, mcp_client, model, gen_config_dict, tool_choice, contents, **kwargs):
     prompt = get_tool_prompt(mcp_client.available_tools, tool_choice)
     current_content = {
         "role": "user",
@@ -74,7 +74,7 @@ async def handle_tool_call(client, mcp_client, model, gen_config_dict, tool_choi
         model=model,
         contents=contents,
         config=gen_config_dict if gen_config_dict else None,
-
+        **kwargs
     )
     
 
@@ -168,6 +168,7 @@ async def generate_text_from_messages_async(
     generation_config_override: Optional[Dict[str, Any]] = None,
     tool_choice: Optional[bool] = None,
     mcp_client: Any = None,
+    **kwargs
 ) -> Dict[str, Any]:
     """Gemini API를 비동기적으로 호출하여 메시지 목록 기반 텍스트 응답 생성."""
     logger.info(f"Gemini generate_text_from_messages_async 호출: model='{model}', messages_count={len(messages)}, thinking_budget={thinking_budget}")
@@ -198,13 +199,13 @@ async def generate_text_from_messages_async(
 
 
         if tool_choice in ["auto", "required"]:
-            response = await handle_tool_call(client, mcp_client, model, gen_config_dict, tool_choice, contents)
+            response = await handle_tool_call(client, mcp_client, model, gen_config_dict, tool_choice, contents, **kwargs)
         else:
             response = await client.aio.models.generate_content(
                 model=model,
                 contents=contents,
-                config=gen_config_dict if gen_config_dict else None
-
+                config=gen_config_dict if gen_config_dict else None,
+                **kwargs
             )
         logger.debug("Gemini API 응답 수신 완료.")
 
