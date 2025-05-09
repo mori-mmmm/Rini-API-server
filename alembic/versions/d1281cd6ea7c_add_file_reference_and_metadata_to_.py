@@ -20,10 +20,9 @@ depends_on: Union[str, Sequence[str], None] = None
 
 def upgrade() -> None:
     """Upgrade schema."""
-
-
-
-
+    op.add_column('messages', sa.Column('file_reference', sa.String(), nullable=True))
+    op.add_column('messages', sa.Column('original_filename', sa.String(), nullable=True))
+    op.add_column('messages', sa.Column('mime_type', sa.String(), nullable=True))
     with op.batch_alter_table('messages', schema=None) as batch_op:
         batch_op.alter_column('content',
                           existing_type=sa.Text(),
@@ -40,7 +39,6 @@ def downgrade() -> None:
         batch_op.alter_column('content',
                           existing_type=sa.Text(),
                           nullable=False)
-
-
-
-
+    op.drop_column('messages', 'mime_type')
+    op.drop_column('messages', 'original_filename')
+    op.drop_column('messages', 'file_reference')
