@@ -1,0 +1,160 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+# *.manifest
+# *.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff (해당되는 경우)
+# *.log
+# local_settings.py
+# db.sqlite3
+# db.sqlite3-journal
+
+# Flask stuff (해당되는 경우)
+instance/
+.webassets-cache
+
+# Scrapy stuff (해당되는 경우)
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# PEP 582; __pypackages__ directory
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.env.*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.venv
+env/
+venv/
+ENV/
+env.bak
+venv.bak
+
+# IDEs and editors
+.idea/
+# .vscode/ # VSCode 설정 파일 (.vscode/settings.json 등)을 공유하려면 이 줄을 주석 처리하거나 삭제하세요.
+*.sublime-project
+*.sublime-workspace
+.project
+nbproject/ # NetBeans
+*.swp # Vim
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal* # 중복될 수 있으나 명시적으로 포함
+*.sql # SQL 덤프 파일 등
+*.cql # Cassandra 쿼리 파일 등
+
+# Log files
+logs/
+*.log
+# 특정 로그 파일 패턴 추가 가능
+
+# Uploads directory
+# 프로젝트에 따라 uploads/ 디렉토리의 내용을 버전 관리할 필요가 없다면 다음 줄의 주석을 해제하세요.
+uploads/
+
+# alembic
+# alembic.ini 파일은 일반적으로 버전 관리합니다.
+# alembic/versions/ 디렉토리의 마이그레이션 스크립트도 버전 관리합니다.
+
+# Temporary files
+*.tmp
+*.bak
+*.swp # Vim 백업 파일 (중복될 수 있음)
+
+# Security files (비밀번호, API 키 등 민감 정보)
+*.pem
+*.key
+credentials*
+secrets.*
+# 예: serviceAccountKey.json
+
+# 프로젝트별 특정 파일
+# rini_api.db # 이미 *.db 패턴으로 포함됨
+
+clean_comment.py

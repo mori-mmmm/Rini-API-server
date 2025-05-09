@@ -1,0 +1,15 @@
+sqlalchemy
+aiosqlite
+fastapi
+mcp
+openai
+pydantic
+cryptography
+python-dotenv
+python-jose[cryptography]
+passlib[bcrypt]
+anthropic
+google-generativeai
+google-api-core
+uvicorn
+alembic
