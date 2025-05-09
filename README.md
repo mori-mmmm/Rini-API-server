@@ -1,4 +1,4 @@
-# Rini API Server
+# Rini API Server [[ENGLISH](https://github.com/mori-mmmm/Rini-API-server/blob/main/README_en.md)]
 Rini API는 다양한 대규모 언어 모델(LLM) 제공사(Google Gemini, OpenAI, Anthropic 등)의 API를 일관된 인터페이스를 통해 사용할 수 있도록 지원하는 비동기 FastAPI 기반 서비스입니다.  
 사용자별 API 키 관리, 세션 관리, 대화 히스토리 저장 및 활용, 메시지별 사용량 추적, 외부 도구(MCP) 연동 설정, 사용자 주도 메모리 관리 등의 기능을 제공합니다.
 
