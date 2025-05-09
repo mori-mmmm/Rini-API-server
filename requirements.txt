@@ -9,6 +9,7 @@ python-dotenv
 python-jose[cryptography]
 passlib[bcrypt]
 anthropic
+google-genai
 google-generativeai
 google-api-core
 uvicorn
