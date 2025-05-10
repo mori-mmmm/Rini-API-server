@@ -17,6 +17,7 @@ MCP_SERVER_URL_LIST = [
     "http://localhost:65001/sse",
     "http://localhost:65002/sse",
     "http://localhost:65003/sse",
+    "http://localhost:65004/sse",
 ]
 
 class MCPClient:
