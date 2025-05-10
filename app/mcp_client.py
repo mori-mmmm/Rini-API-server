@@ -14,6 +14,9 @@ from openai.types.chat import ChatCompletionMessage, ChatCompletionMessageToolCa
 
 MCP_SERVER_URL_LIST = [
     "http://localhost:65000/sse",
+    "http://localhost:65001/sse",
+    "http://localhost:65002/sse",
+    "http://localhost:65003/sse",
 ]
 
 class MCPClient:

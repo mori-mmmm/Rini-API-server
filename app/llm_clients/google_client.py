@@ -147,7 +147,7 @@ async def handle_tool_call(client, mcp_client, model, gen_config_dict, tool_choi
             },
             {
                 "role": "user",
-                "parts": [{"text": str(results)}]
+                "parts":  [{"text": f"{results}\n위 tool_call 실행 결과를 가지고 원래 질문에 답해줘"}]
             }
         ]
         contents += current_contents

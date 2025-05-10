@@ -104,7 +104,7 @@ async def handle_tool_call(client, mcp_client, model, tool_choice, messages, **k
             },
             {
                 "role": "user",
-                "content": str(results)
+                "content":  f"{results}\n위 tool_call 실행 결과를 가지고 원래 질문에 답해줘"
             }
         ]
         messages += current_messages
