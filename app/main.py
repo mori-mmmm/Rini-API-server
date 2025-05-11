@@ -781,7 +781,7 @@ async def handle_image_completion(
         
         try:
             if provider == schemas.LLMProvider.GOOGLE:
-                if not model_to_use: model_to_use = "gemini-1.5-flash"
+                if not model_to_use: model_to_use = "gemini-2.0-flash"
                 llm_response_data = await google_client.generate_text_from_image_and_text_async(
                     api_key=decrypted_api_key,
                     image_path=saved_file_path,
